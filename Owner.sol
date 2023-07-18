@@ -46,7 +46,7 @@ contract Owner {
         emit NewReceiver(walletAddress, name, birthday);
     }
 
-    function recieve() external payable {
+    function deposit() external payable {
         bank += msg.value;
     }
 
@@ -81,7 +81,7 @@ contract Owner {
         emit GotMoney(walletAddress);
     }
 
-    function readGrandChildsArray(uint cursor, uint length) public view returns(address[] memory) {
+    function readReceiversArray(uint cursor, uint length) public view returns(address[] memory) {
         address[] memory array = new address[](length);
         uint counter = 0;
 
