@@ -43,7 +43,7 @@ contract Owner {
         arrReceivers.push(walletAddress);
         receiversNumber++;
 
-        emit NewGrandChild(walletAddress, name, birthday);
+        emit NewReceiver(walletAddress, name, birthday);
     }
 
     function recieve() external payable {
@@ -93,6 +93,6 @@ contract Owner {
         return array;
     }
 
-    event NewGrandChild(address indexed walletAddress, string name, uint256 birthday);
+    event NewReceiver(address indexed walletAddress, string name, uint256 birthday);
     event GotMoney(address indexed walletAddress);
 }
